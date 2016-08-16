@@ -1,0 +1,33 @@
+{
+  "name": "Gab Tab Extension",
+  "version": "0.1",
+  "minimum_chrome_version": "37",
+  "manifest_version": 1,
+  "default_locale": "en",
+  "update_url": "http://localhost.com/4000",
+  "description": "It should be easy to keep up with those dear to you, no matter their age. Gab makes it easy to share your everyday life- whether that means a quick video chat or your latest selfie. Gab: bridging the gap between seniors and loved ones.",
+  "icons": {
+    "128": "icon_128.png",
+     "48": "icon_48.png",
+     "16": "icon_16.png"
+  },
+  "permissions": [
+    "chrome://favicon/",
+    "management",
+    "tabs",
+    "fontSettings",
+    "sessions"
+  ],
+  "chrome_url_overrides":
+  {
+    "newtab": "newtab.html"
+  },
+  "background" : {
+    "scripts" : ["background.js"],
+    "persistent" : true
+  },
+  "options_page": "newtab.html#options",
+  "web_accessible_resources": [
+    "newtab.html"
+  ]
+}
